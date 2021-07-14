@@ -95,8 +95,8 @@ async def start_bot():
     print(
         "+===============+===============+===============+===============+"
     )
-    print(f"[INFO]: BOT STARTED AS {BOT_NAME}!")
-    print(f"[INFO]: USERBOT STARTED AS {USERBOT_NAME}!")
+    print(f"[INFO]: BOT STARTED AS {AALINA_DREAMER}!")
+    print(f"[INFO]: USERBOT STARTED AS {Aalina_DreamerBot}!")
     await idle()
     print("[INFO]: STOPPING BOT AND CLOSING AIOHTTP SESSION")
     await aiohttpsession.close()
@@ -110,11 +110,11 @@ async def help_command(_, message):
                 [
                     InlineKeyboardButton(
                         text="Help ❓",
-                        url=f"t.me/{BOT_USERNAME}?start=help",
+                        url=f"t.me/{Aalina_DreamerBot}?start=help",
                     ),
                     InlineKeyboardButton(
                         text="Repo 🛠",
-                        url="https://github.com/thehamkercat/WilliamButcherBot",
+                        url="https://github.com/Harrybot021/WilliamButcherBot",
                     ),
                 ],
                 [
@@ -123,8 +123,10 @@ async def help_command(_, message):
                         callback_data="stats_callback",
                     ),
                     InlineKeyboardButton(
-                        text="Support 👨", url="t.me/WBBSupport"
+                        text="Support 👨", url="t.me/Empire_Support21"
                     ),
+                    InlineKeyboardButton(
+                        text="🤴 OWNER", url="https://t.me/Dev_Harry"),
                 ],
             ]
         )
@@ -140,7 +142,7 @@ async def help_command(_, message):
                 ),
                 InlineKeyboardButton(
                     text="Repo 🛠",
-                    url="https://github.com/thehamkercat/WilliamButcherBot",
+                    url="https://github.com/Harrybot021/WilliamButcherBot",
                 ),
             ],
             [
@@ -149,19 +151,19 @@ async def help_command(_, message):
                     callback_data="stats_callback",
                 ),
                 InlineKeyboardButton(
-                    text="Support 👨", url="t.me/WBBSupport"
+                    text="Support 👨", url="t.me/Empire_Support21"
                 ),
             ],
             [
                 InlineKeyboardButton(
                     text="Add Me To Your Group 🎉",
-                    url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
+                    url=f"http://t.me/{Aalina_DreamerBot}?startgroup=new",
                 )
             ],
         ]
     )
     await message.reply(
-        f"Hey there! My name is {BOT_NAME}. I can manage your group with lots of useful features, feel free to add me to your group.",
+        f"Hey there! My name is {AALINA_DREAMER}. I can manage your group with lots of useful features, feel free to add me to your group.",
         reply_markup=keyboard,
     )
 
@@ -217,7 +219,7 @@ async def help_button(client, query):
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
-Hello {query.from_user.first_name}! My name is {BOT_NAME}!
+Hello {query.from_user.first_name}! My name is {AALINA_DREAMER}!
 I'm a group management bot with some usefule features.
 You can choose an option below, by clicking a button.
 Also you can ask anything in Support Group.
